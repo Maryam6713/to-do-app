@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    margin: 10px;
+}
+.cursor-dot{
+    width: 5px;
+    height: 5px;
+    background-color: white;
+}
+.cursor-outline{
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+.cursor-dot,.cursor-outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container {
+    background-color: #4e4d4df6;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    animation: glow 2s infinite alternate;
+
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.39);
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.596);
+    }
+    100% {
+        box-shadow: 0 0 30px 20px rgba(255, 255, 255, 0.678);
+    }
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.all-btn{
+    background-color: black;
+    height: 50px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.all-btn i {
+    margin-left: 10px;
+}
+
+h2 {
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+    display: inline;
+}
+
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.add-btn {
+    background: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li input[type="text"] {
+    border: none;
+    background: none;
+    font-size: 16px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+ul li input[type="text"]:disabled {
+    background: none;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+.icons i:hover {
+    color: #007bff;
+}
+
+.icons .fa-trash:hover {
+    color: #dc3545;
+}
